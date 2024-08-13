@@ -1,0 +1,65 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SyncPro.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SyncProDatabaseConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SyncProDatabase.mdf;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SyncProDatabase.mdf;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="Username" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="RememberedUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Domain" Type="System.String" Scope="User">
+      <Value Profile="(Default)">syncpro.com</Value>
+    </Setting>
+    <Setting Name="PasswordLength" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="SPECIAL_CHARACTER" Type="System.String" Scope="User">
+      <Value Profile="(Default)">!@#$%^&amp;*()-_+=&lt;&gt;?.</Value>
+    </Setting>
+    <Setting Name="LOWER_CASE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">abcdefghijklmnopqursuvwxyz</Value>
+    </Setting>
+    <Setting Name="UPPER_CASE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ABCDEFGHIJKLMNOPQRSTUVWXYZ</Value>
+    </Setting>
+    <Setting Name="NUMBERIC" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1234567890</Value>
+    </Setting>
+    <Setting Name="LowerCase" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UpperCase" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="NumericCase" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SpacialCase" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FilterPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">product_code.json</Value>
+    </Setting>
+    <Setting Name="BackupFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Backup</Value>
+    </Setting>
+    <Setting Name="RememberedPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SavedUsernames" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

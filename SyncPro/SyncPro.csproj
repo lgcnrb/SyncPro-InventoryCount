@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6650071A-DAC4-4839-9BB8-49294D5EDDEF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SyncPro</RootNamespace>
+    <AssemblyName>SyncPro</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Images\SyncPro-96.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SyncPro.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=1.2.29301.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DG.AdvancedDataGridView.1.2.29301.14\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.0.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.0.2\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.7.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.7.0\lib\net462\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.7.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.7.0\lib\net462\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.0\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.7.3\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.4\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminRegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRegistrationForm.Designer.cs">
+      <DependentUpon>AdminRegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComparisonReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComparisonReportForm.Designer.cs">
+      <DependentUpon>ComparisonReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountEditingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountEditingForm.Designer.cs">
+      <DependentUpon>CountEditingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountingReviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountingReviewForm.Designer.cs">
+      <DependentUpon>CountingReviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBackupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBackupForm.Designer.cs">
+      <DependentUpon>DataBackupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EncryptionHelper.cs" />
+    <Compile Include="HardwareIdHelper.cs" />
+    <Compile Include="ProductCodeEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductCodeEditorForm.Designer.cs">
+      <DependentUpon>ProductCodeEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalMethods.cs" />
+    <Compile Include="GenerationFunctions.cs" />
+    <Compile Include="InventoryCountInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryCountInformationForm.Designer.cs">
+      <DependentUpon>InventoryCountInformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryCountingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryCountingForm.Designer.cs">
+      <DependentUpon>InventoryCountingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IStockCountRepository.cs" />
+    <Compile Include="IStocktakingListRepository.cs" />
+    <Compile Include="ISystemInventoryRepository.cs" />
+    <Compile Include="IUsersRepository.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUserForm.Designer.cs">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordHasher.cs" />
+    <Compile Include="PasswordUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordUpdateForm.Designer.cs">
+      <DependentUpon>PasswordUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductListEditingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductListEditingForm.Designer.cs">
+      <DependentUpon>ProductListEditingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RestoreDatabaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestoreDatabaseForm.Designer.cs">
+      <DependentUpon>RestoreDatabaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockCountRepo.cs" />
+    <Compile Include="StockCountRepository.cs" />
+    <Compile Include="StocktakingList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StocktakingList.Designer.cs">
+      <DependentUpon>StocktakingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StocktakingListRepo.cs" />
+    <Compile Include="StocktakingListRepository.cs" />
+    <Compile Include="SyncPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyncPro.Designer.cs">
+      <DependentUpon>SyncPro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SyncProAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyncProAbout.Designer.cs">
+      <DependentUpon>SyncProAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SyncProDatabaseDataSet.cs">
+      <DependentUpon>SyncProDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SyncProDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SyncProDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SyncProMainForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SyncProMainForm.Designer.cs">
+      <DependentUpon>SyncProMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemInventory.Designer.cs">
+      <DependentUpon>SystemInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemInventoryForm.Designer.cs">
+      <DependentUpon>SystemInventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemInventoryRepo.cs" />
+    <Compile Include="SystemInventoryRepository.cs" />
+    <Compile Include="SystemSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSettingsForm.Designer.cs">
+      <DependentUpon>SystemSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfoCollector.cs" />
+    <Compile Include="UserInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInformationForm.Designer.cs">
+      <DependentUpon>UserInformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagementPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserManagementPanel.Designer.cs">
+      <DependentUpon>UserManagementPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl.cs" />
+    <Compile Include="UsersRepostory.cs" />
+    <Compile Include="UserUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserUpdateForm.Designer.cs">
+      <DependentUpon>UserUpdateForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminRegistrationForm.resx">
+      <DependentUpon>AdminRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComparisonReportForm.resx">
+      <DependentUpon>ComparisonReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountEditingForm.resx">
+      <DependentUpon>CountEditingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountingReviewForm.resx">
+      <DependentUpon>CountingReviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataBackupForm.resx">
+      <DependentUpon>DataBackupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCodeEditorForm.resx">
+      <DependentUpon>ProductCodeEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryCountInformationForm.resx">
+      <DependentUpon>InventoryCountInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryCountingForm.resx">
+      <DependentUpon>InventoryCountingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUserForm.resx">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordUpdateForm.resx">
+      <DependentUpon>PasswordUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductListEditingForm.resx">
+      <DependentUpon>ProductListEditingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RestoreDatabaseForm.resx">
+      <DependentUpon>RestoreDatabaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StocktakingList.resx">
+      <DependentUpon>StocktakingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyncPro.resx">
+      <DependentUpon>SyncPro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyncProAbout.resx">
+      <DependentUpon>SyncProAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyncProMainForm.resx">
+      <DependentUpon>SyncProMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemInventory.resx">
+      <DependentUpon>SystemInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemInventoryForm.resx">
+      <DependentUpon>SystemInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSettingsForm.resx">
+      <DependentUpon>SystemSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInformationForm.resx">
+      <DependentUpon>UserInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagementPanel.resx">
+      <DependentUpon>UserManagementPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUpdateForm.resx">
+      <DependentUpon>UserUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SyncProDatabaseDataSet.xsc">
+      <DependentUpon>SyncProDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SyncProDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SyncProDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SyncProDatabaseDataSet.xss">
+      <DependentUpon>SyncProDatabaseDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\SyncPro-48.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\SyncPro-96.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\DataReg.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Insert.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SyncPro-96.ico" />
+    <Content Include="SyncProDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SyncProDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>SyncProDatabase.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 ve x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 </ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
